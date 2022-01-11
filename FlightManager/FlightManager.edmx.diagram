@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc9a5d0197d44636bcfc40a017f68cb3" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.account" Width="1.5" PointX="5.25" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airline" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airplane" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airplane_type" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.airport" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.assignment" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.bill" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.customer" Width="1.5" PointX="8.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.employee" Width="1.5" PointX="5.25" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.employee_position" Width="1.5" PointX="3" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.flight" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.manufacture" Width="1.5" PointX="1.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.regulation" Width="1.5" PointX="2.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.schedule" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.seat" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.seat_class" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.seat_type" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ticket" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ticket_price" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ticket_type" Width="1.5" PointX="8.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.transit_airport" Width="1.5" PointX="10.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.user" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.user_role" Width="1.5" PointX="3" PointY="27.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.account_account_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.account_account_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.airplane_airplane_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.airplane_airplane_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.flight_flight_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.airplane_type_airplane_type_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.schedule_schedule_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.schedule_schedule_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.transit_airport_transit_airport_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.assignment_assignment_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.assignment_assignment_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.bill_bill_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_ticket_ibfk_3" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.customer_customer_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_ticket_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.employee_employee_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.employee_employee_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.flight_flight_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.seat_class_seat_class_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_ticket_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_price_ticket_price_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.transit_airport_transit_airport_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.seat_seat_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_ticket_ibfk_5" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.seat_class_seat_class_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_ticket_ibfk_4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.ticket_price_ticket_price_ibfk_2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
