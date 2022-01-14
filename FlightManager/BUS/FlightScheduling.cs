@@ -22,7 +22,7 @@ namespace FlightManager.BUS
             dAO_Seat_Class = new DAO_Seat_Class();
             dAO_Schedule = new DAO_Schedule();
         }
-        public int AddFlightScheduling(string flightID, string airplaneID, string departureAirport, string arrivalAirport, DateTime departureDay, int flightTime, int businessClass, int economyClass, List<String> transitAirport, List<DateTime> arrivalDay, List<int> timmingStop, List<String> note /*flight f, seat_class seat_Class1, seat_class seat_Class2*/)
+        public int AddFlightScheduling(string flightID, string airplaneID, string departureAirport, string arrivalAirport, DateTime departureDay, int flightTime, int businessClass, int economyClass, List<String> transitAirport, List<DateTime> arrivalDay, List<int> timmingStop, List<String> note)
         {
             using (TransactionScope trans = new TransactionScope())
             {
