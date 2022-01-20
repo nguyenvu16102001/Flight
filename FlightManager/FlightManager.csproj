@@ -79,19 +79,34 @@
     </Compile>
     <Compile Include="BUS\BUS_Airplane.cs" />
     <Compile Include="BUS\BUS_Airport.cs" />
+    <Compile Include="BUS\BUS_Billl.cs" />
+    <Compile Include="BUS\BUS_Customer.cs" />
+    <Compile Include="BUS\BUS_Flight.cs" />
     <Compile Include="BUS\BUS_Regulations.cs" />
     <Compile Include="BUS\BUS_Schedule.cs" />
+    <Compile Include="BUS\BUS_Seat.cs" />
+    <Compile Include="BUS\BUS_Ticket.cs" />
+    <Compile Include="BUS\BUS_TicketPrice.cs" />
+    <Compile Include="BUS\BUS_TicketType.cs" />
+    <Compile Include="BUS\BUS_User.cs" />
     <Compile Include="BUS\FlightScheduling.cs" />
     <Compile Include="customer.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
     <Compile Include="DAO\DAO_Airplane.cs" />
     <Compile Include="DAO\DAO_Airport.cs" />
+    <Compile Include="DAO\DAO_Bill.cs" />
+    <Compile Include="DAO\DAO_Customer.cs" />
     <Compile Include="DAO\DAO_Flight.cs" />
     <Compile Include="DAO\DAO_Regulations.cs" />
     <Compile Include="DAO\DAO_Schedule.cs" />
+    <Compile Include="DAO\DAO_Seat.cs" />
     <Compile Include="DAO\DAO_Seat_Class.cs" />
+    <Compile Include="DAO\DAO_Ticket.cs" />
+    <Compile Include="DAO\DAO_TicketPrice.cs" />
+    <Compile Include="DAO\DAO_TicketType.cs" />
     <Compile Include="DAO\DAO_Transit_Airport.cs" />
+    <Compile Include="DAO\DAO_User.cs" />
     <Compile Include="employee.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
@@ -103,6 +118,12 @@
     </Compile>
     <Compile Include="FFlightScheduling.Designer.cs">
       <DependentUpon>FFlightScheduling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHomeTicketSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHomeTicketSales.Designer.cs">
+      <DependentUpon>FHomeTicketSales.cs</DependentUpon>
     </Compile>
     <Compile Include="flight.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
@@ -122,11 +143,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FlightManager.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPayment.Designer.cs">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPassengers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPassengers.Designer.cs">
+      <DependentUpon>FPassengers.cs</DependentUpon>
+    </Compile>
     <Compile Include="manufacture.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSearch.Designer.cs">
+      <DependentUpon>FSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSeatSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSeatSelection.Designer.cs">
+      <DependentUpon>FSeatSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTicketSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTicketSales.Designer.cs">
+      <DependentUpon>FTicketSales.cs</DependentUpon>
+    </Compile>
     <Compile Include="regulation.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
@@ -140,9 +191,6 @@
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
     <Compile Include="seat_type.cs">
-      <DependentUpon>FlightManager.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
       <DependentUpon>FlightManager.tt</DependentUpon>
     </Compile>
     <Compile Include="ticket.cs">
@@ -166,6 +214,15 @@
     <EmbeddedResource Include="FFlightScheduling.resx">
       <DependentUpon>FFlightScheduling.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FHomeTicketSales.resx">
+      <DependentUpon>FHomeTicketSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPassengers.resx">
+      <DependentUpon>FPassengers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPayment.resx">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -175,6 +232,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FSearch.resx">
+      <DependentUpon>FSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSeatSelection.resx">
+      <DependentUpon>FSeatSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTicketSales.resx">
+      <DependentUpon>FTicketSales.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="FlightManager.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FlightManager.Designer.cs</LastGenOutput>
@@ -197,6 +263,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="FlightManager.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FlightManager.edmx</DependentUpon>
@@ -207,9 +276,6 @@
       <DependentUpon>FlightManager.edmx</DependentUpon>
       <LastGenOutput>FlightManager.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

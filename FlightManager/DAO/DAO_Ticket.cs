@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace FlightManager.DAO
 {
-    class DAO_Regulations
+    class DAO_Ticket
     {
         Flight_ManagerEntities db;
-        public DAO_Regulations()
+        public DAO_Ticket()
         {
             db = new Flight_ManagerEntities();
         }
-        public regulation ListRegulations()
+
+        public void AddTicket(ticket ticket)
         {
-            return db.regulations.FirstOrDefault(s => s.regulations_id == 1);
+            db.tickets.Add(ticket);
+            db.SaveChanges();
         }
     }
 }

@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace FlightManager.DAO
 {
-    class DAO_Regulations
+    class DAO_TicketPrice
     {
         Flight_ManagerEntities db;
-        public DAO_Regulations()
+        public DAO_TicketPrice()
         {
             db = new Flight_ManagerEntities();
         }
-        public regulation ListRegulations()
+
+        public ticket_price GetListTicketPrice(string flightID, int ticketType)
         {
-            return db.regulations.FirstOrDefault(s => s.regulations_id == 1);
+            return db.ticket_price.FirstOrDefault(s => s.flight_id == flightID && s.ticket_type == ticketType);
         }
     }
 }

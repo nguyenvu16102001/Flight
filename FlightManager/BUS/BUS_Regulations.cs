@@ -18,7 +18,7 @@ namespace FlightManager.BUS
         }
         public IDictionary<string, int> ListRegulations()
         {
-            regulation reg = dAO_Regulations.ListRegulations(); 
+            regulation reg = dAO_Regulations.ListRegulations();
             IDictionary<string, int> dict = new Dictionary<string, int>();
             dict.Add("minimum_flight_time", reg.minimum_flight_time.Value);
             dict.Add("minimum_estimated_time_of_the_stop", reg.minimum_estimated_time_of_the_stop.Value);

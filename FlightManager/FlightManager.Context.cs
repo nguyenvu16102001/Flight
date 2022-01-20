@@ -25,7 +25,6 @@ namespace FlightManager
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<account> accounts { get; set; }
         public virtual DbSet<airline> airlines { get; set; }
         public virtual DbSet<airplane> airplanes { get; set; }

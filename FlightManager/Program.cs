@@ -16,7 +16,7 @@ namespace FlightManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FFlightScheduling());
+            Application.Run(new FTicketSales());
         }
     }
 }

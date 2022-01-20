@@ -22,7 +22,7 @@ namespace FlightManager
         }
     
         public int user_id { get; set; }
-        public int employee_position { get; set; }
+        public Nullable<int> employee_position { get; set; }
         public Nullable<System.DateTime> starting_date { get; set; }
         public Nullable<decimal> salary { get; set; }
     
