@@ -8,20 +8,20 @@ using System.Windows.Forms;
 
 namespace FlightManager.BUS
 {
-    class BUS_Flight
+    class BUS_Price
     {
-        DAO_Flight dAO_Flight;
-        public BUS_Flight()
+        DAO_Price dAO_Price;
+        public BUS_Price()
         {
-            dAO_Flight = new DAO_Flight();
+            dAO_Price = new DAO_Price();
         }
-        public void ListFlight(DataGridView dg)
+        public void ListPrice(DataGridView dg)
         {
-            dg.DataSource = dAO_Flight.ListFlight();
+            dg.DataSource = dAO_Price.ListPrice();
         }
-        public int Add_Flight(flight flight)
+        public int Add_Price(ticket_price price)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Price.CheckPrice(price.flight_id, price.ticket_type))
             {
                 return 0;
             }
@@ -29,7 +29,7 @@ namespace FlightManager.BUS
             {
                 try
                 {
-                    dAO_Flight.Add_Flight(flight);
+                    dAO_Price.Add_Price(price);
                     return 1;
                 }
                 catch (Exception)
@@ -38,13 +38,13 @@ namespace FlightManager.BUS
                 }
             }
         }
-        public int Delete_Flight(string flight_id)
+        public int Delete_Price(string flight_id, int ticket_type)
         {
             try
             {
-                if (dAO_Flight.CheckFlight(flight_id))
+                if (dAO_Price.CheckPrice(flight_id, ticket_type))
                 {
-                    dAO_Flight.Delete_Flight(flight_id);
+                    dAO_Price.Delete_Price(flight_id, ticket_type);
                     return 1;
                 }
                 else
@@ -57,13 +57,13 @@ namespace FlightManager.BUS
                 return -1;
             }
         }
-        public int Update_Flight(flight flight)
+        public int Update_Price(ticket_price price)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Price.CheckPrice(price.flight_id, price.ticket_type))
             {
                 try
                 {
-                    dAO_Flight.Update_Flight(flight);
+                    dAO_Price.Update_Price(price);
                     return 1;
                 }
                 catch (Exception)

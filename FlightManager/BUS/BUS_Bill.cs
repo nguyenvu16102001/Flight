@@ -8,20 +8,20 @@ using System.Windows.Forms;
 
 namespace FlightManager.BUS
 {
-    class BUS_Flight
+    class BUS_Bill
     {
-        DAO_Flight dAO_Flight;
-        public BUS_Flight()
+        DAO_Bill dAO_Bill;
+        public BUS_Bill()
         {
-            dAO_Flight = new DAO_Flight();
+            dAO_Bill = new DAO_Bill();
         }
-        public void ListFlight(DataGridView dg)
+        public void ListBill(DataGridView dg)
         {
-            dg.DataSource = dAO_Flight.ListFlight();
+            dg.DataSource = dAO_Bill.ListBill();
         }
-        public int Add_Flight(flight flight)
+        public int Add_Bill(bill bill)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Bill.CheckBill(bill.bill_id))
             {
                 return 0;
             }
@@ -29,7 +29,7 @@ namespace FlightManager.BUS
             {
                 try
                 {
-                    dAO_Flight.Add_Flight(flight);
+                    dAO_Bill.Add_Bill(bill);
                     return 1;
                 }
                 catch (Exception)
@@ -38,13 +38,13 @@ namespace FlightManager.BUS
                 }
             }
         }
-        public int Delete_Flight(string flight_id)
+        public int Delete_Bill(string bill_id)
         {
             try
             {
-                if (dAO_Flight.CheckFlight(flight_id))
+                if (dAO_Bill.CheckBill(bill_id))
                 {
-                    dAO_Flight.Delete_Flight(flight_id);
+                    dAO_Bill.Delete_Bill(bill_id);
                     return 1;
                 }
                 else
@@ -57,13 +57,13 @@ namespace FlightManager.BUS
                 return -1;
             }
         }
-        public int Update_Flight(flight flight)
+        public int Update_Bill(bill bill)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Bill.CheckBill(bill.bill_id))
             {
                 try
                 {
-                    dAO_Flight.Update_Flight(flight);
+                    dAO_Bill.Update_Bill(bill);
                     return 1;
                 }
                 catch (Exception)

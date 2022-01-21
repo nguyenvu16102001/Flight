@@ -8,20 +8,20 @@ using System.Windows.Forms;
 
 namespace FlightManager.BUS
 {
-    class BUS_Flight
+    class BUS_Seat_Class
     {
-        DAO_Flight dAO_Flight;
-        public BUS_Flight()
+        DAO_Seat_Class dAO_Seat_Class;
+        public BUS_Seat_Class()
         {
-            dAO_Flight = new DAO_Flight();
+            dAO_Seat_Class = new DAO_Seat_Class();
         }
-        public void ListFlight(DataGridView dg)
+        public void ListSeat(DataGridView dg)
         {
-            dg.DataSource = dAO_Flight.ListFlight();
+            dg.DataSource = dAO_Seat_Class.ListSeat();
         }
-        public int Add_Flight(flight flight)
+        public int Add_Seat(seat_class seat)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Seat_Class.CheckSeat(seat.flight_id, seat.seat_type))
             {
                 return 0;
             }
@@ -29,7 +29,7 @@ namespace FlightManager.BUS
             {
                 try
                 {
-                    dAO_Flight.Add_Flight(flight);
+                    dAO_Seat_Class.AddSeatClass(seat);
                     return 1;
                 }
                 catch (Exception)
@@ -38,13 +38,13 @@ namespace FlightManager.BUS
                 }
             }
         }
-        public int Delete_Flight(string flight_id)
+        public int Delete_Seat(string flight_id, int seat_type)
         {
             try
             {
-                if (dAO_Flight.CheckFlight(flight_id))
+                if (dAO_Seat_Class.CheckSeat(flight_id, seat_type))
                 {
-                    dAO_Flight.Delete_Flight(flight_id);
+                    dAO_Seat_Class.Delete_Seat(flight_id, seat_type);
                     return 1;
                 }
                 else
@@ -57,13 +57,13 @@ namespace FlightManager.BUS
                 return -1;
             }
         }
-        public int Update_Flight(flight flight)
+        public int Update_Seat(seat_class seat)
         {
-            if (dAO_Flight.CheckFlight(flight.flight_id))
+            if (dAO_Seat_Class.CheckSeat(seat.flight_id, seat.seat_type))
             {
                 try
                 {
-                    dAO_Flight.Update_Flight(flight);
+                    dAO_Seat_Class.Update_Seat(seat);
                     return 1;
                 }
                 catch (Exception)
